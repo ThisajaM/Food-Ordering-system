@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c2d57afa-088a-4af5-a925-31fe763b9ece">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * from OrderD]]>
+	</queryString>
+	<field name="OrdID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OCusName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OAddress" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OTelNum" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OTotalPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OPayType" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="61" splitType="Stretch">
+			<image>
+				<reportElement x="22" y="10" width="166" height="39" uuid="fca94eed-be0d-4fd0-82e0-06cd8ff275a8"/>
+				<imageExpression><![CDATA["/Users/thisajamudalige/Downloads/Java Applications/Starbucks/src/pngwing.com.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="199" y="0" width="186" height="32" uuid="51bbdd39-2175-4151-b0d4-7fbe2fa229da"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Nile" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ORDER REPORT]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="10" width="45" height="20" uuid="101188b7-c924-40ee-a305-4c69610090d7"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="10" width="87" height="20" uuid="a3e36833-92a8-404c-8c26-51ab69a0f9af"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Bayan" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="10" width="45" height="20" uuid="07360726-e485-458c-9604-69825761ce4e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Bayan" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="10" width="80" height="20" uuid="93ce8be6-c627-4333-9263-613fb6e04b62"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Bayan" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Phone Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="349" y="2" width="56" height="36" uuid="cc172be2-2b9e-43a5-8b74-13e06f3e4fad"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Bayan" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Price  (RS)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="0" width="56" height="46" uuid="11466f9a-e1fc-43bd-9ddb-39f75b1a4bfa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Bayan" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="483" y="10" width="56" height="20" uuid="e3b8cd84-7015-456f-b0a2-b09670600019"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Bayan" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="46" width="554" height="1" uuid="d314eee7-4b7c-4bc1-bdf8-e0ae61a2c8de"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="56" height="20" uuid="a17719e5-1dff-4693-8340-3c9d18d79521"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Bayan"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OrdID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="0" width="100" height="20" uuid="d935280c-a53f-4f63-91f2-8b2d8795a950"/>
+				<textElement>
+					<font fontName="Al Bayan"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OCusName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="0" width="65" height="20" uuid="23eba929-5ed1-44f2-bdeb-dda21b298397"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Bayan"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="243" y="0" width="100" height="20" uuid="d493db63-1be9-4045-bb82-ff01174af133"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Bayan"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OTelNum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="343" y="0" width="66" height="20" uuid="8f4fd179-8f49-433b-a265-889b27ac2b18"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Bayan"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OTotalPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="0" width="56" height="20" uuid="0e38fa62-81a5-4146-80c9-0da5fc2e6ee4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Bayan"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OPayType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="0" width="56" height="20" uuid="640ff895-7e67-4dd9-aef8-c2ef5fc7394c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Bayan"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="48" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="31" width="554" height="1" uuid="795f3d38-cc89-42ac-8e95-714e5b91ad80"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="233" y="0" width="100" height="19" uuid="4948402c-4cf8-4397-be2f-b9297f01e943"/>
+				<textElement textAlignment="Center">
+					<font fontName="Al Bayan" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
